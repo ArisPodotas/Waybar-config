@@ -1,14 +1,24 @@
-@import "../omarchy/current/theme/waybar.css";
+/* @import "../omarchy/current/theme/waybar.css"; */
 
 * {
-    background-color: @background;
-    color: @foreground;
+    /* background-color: @background; */
+    /* color: @foreground; */
     opacity: 0.9;
     border: none;
     border-radius: 8pt;
     min-height: 0;
     font-family: 'CaskaydiaMono Nerd Font';
-    font-size: 18px;
+    font-size: 17px;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
 }
 
 .modules-left {
@@ -24,10 +34,22 @@
     padding: 0 6px;
     margin: 0 1.5px;
     min-width: 9px;
+    background-color: #000000;
+    /* color: #1e1e1e; */
+    border-radius: 8pt;
+    box-shadow: inset 0 -3px transparent;
 }
 
 #workspaces button.empty {
     opacity: 0.5;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #1e1e2e;
+    background-color: #cdd6f4;
+    /* background-color: #cba6f7; */
 }
 
 #tray,
@@ -40,9 +62,70 @@
 #custom-omarchy,
 #custom-screenrecording-indicator,
 #custom-update {
-    min-width: 12px;
-    margin: 0 7.5px;
     opacity: 0.9;
+    min-width: 12px;
+    margin: 0 2.5px;
+    opacity: 0.9;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+
+#bluetooth{
+    color: #222222;
+    background-color: #76a6f7;
+}
+
+#pulseaudio{
+    color: #222222;
+    background-color: #cccccc;
+}
+
+#custom-update {
+    font-size: 10px;
+}
+
+#clock {
+    font-family: JetBrainsMono Nerd Font;
+    color: #222222;
+    background-color: #cba6f7;
+    margin-left: 8.75px;
+    opacity: 0.9;
+}
+
+#network {
+    color: #222222;
+    background-color: #94e2d5;
+    padding-right: 17px;
+}
+
+
+#temperature{
+    background-color: #cba6f7;
+    color: #222222;
+}
+
+#cpu{
+    color: #222222;
+    background-color: #fab387;
+}
+
+#battery {
+    color: #222222;
+    background-color: #f38ba8;
+}
+
+#battery.charging {
+    background-color: #a6e3a1;
+    color: #181825;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    background-color: #ff0000;
+    color: #FFFF00;
 }
 
 #custom-expand-icon {
@@ -53,14 +136,6 @@ tooltip {
     padding: 2px;
 }
 
-#custom-update {
-    font-size: 10px;
-}
-
-#clock {
-    margin-left: 8.75px;
-    opacity: 0.9;
-}
 
 .hidden {
     opacity: 0;
