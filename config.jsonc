@@ -12,6 +12,7 @@
         "network",
         "pulseaudio",
         "cpu",
+        "temperature",
         "battery"
     ],
     "hyprland/workspaces": {
@@ -59,12 +60,16 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "󰍛",
+        "format": "󰍛 {usage}%",
         "on-click": "$TERMINAL -e btop"
     },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C"
+    },
     "clock": {
-        "format": "{:L%A %H:%M}",
-        "format-alt": "{:L%d %B W%V %Y}",
+        "format": "{:%H:%M, %A %d, %B}",
         "tooltip": false,
         "on-click-right": "omarchy-cmd-tzupdate"
     },
