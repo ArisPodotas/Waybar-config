@@ -58,6 +58,7 @@ window#waybar:hover{
 
 #tray,
 #cpu,
+#memory,
 #temperature,
 #battery,
 #network,
@@ -126,6 +127,12 @@ window#waybar:hover{
 #temperature{
     background-color: #cba6f7;
     color: #222222;
+}
+
+#memory{
+    color: #e0f0f0;
+    background-color: #292929;
+    border: 1px solid white;
 }
 
 #cpu{
