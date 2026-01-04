@@ -4,7 +4,7 @@
     "position": "top",
     "spacing": 0,
     "height": 34,
-    "modules-left": ["custom/omarchy", "hyprland/workspaces"],
+    "modules-left": ["custom/omarchy", "keyboard-state", "hyprland/workspaces"],
     "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
     "modules-right": [
         "group/tray-expander",
@@ -38,6 +38,15 @@
             "1": [],
             "2": [],
             "3": [],
+        }
+    },
+    "keyboard-state": {
+        "numlock": false,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
         }
     },
     "custom/omarchy": {
@@ -89,8 +98,8 @@
     },
     "battery": {
         "format": " {capacity}% {icon} ",
-        "format-discharging": " {icon} ",
-        "format-charging": " {icon} ",
+        "format-discharging": " {capacity}% {icon} ",
+        "format-charging": " {capacity}% {icon} ",
         "format-plugged": "",
         "format-icons": {
             "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
@@ -119,7 +128,7 @@
         "on-click-right": "pamixer -t",
         "tooltip-format": "Playing at {volume}%",
         "scroll-step": 5,
-        "format-muted": "  " ,
+        "format-muted": "   " ,
         "format-icons": {
             "default": ["  ", "  ", "  "]
         }

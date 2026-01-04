@@ -11,6 +11,15 @@
     font-size: 17px;
 }
 
+tooltip {
+    padding: 2px;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
 window#waybar {
     background-color: transparent;
     transition-property: background-color;
@@ -63,12 +72,25 @@ window#waybar:hover{
 #battery,
 #network,
 #bluetooth,
+#keyboard-state,
 #pulseaudio,
 #custom-screenrecording-indicator,
 #custom-update {
     opacity: 0.9;
     min-width: 12px;
     margin: 0 2.5px;
+}
+
+#keyboard-state {
+    all: initial;
+    padding: 0 10px;
+    margin: 0 2.5px;
+    opacity: 0.9;
+    min-width: 12px;
+    background-color: #000000;
+    /* color: #1e1e1e; */
+    border-radius: 4pt;
+    box-shadow: inset 0 -3px transparent;
 }
 
 #custom-omarchy{
@@ -110,7 +132,7 @@ window#waybar:hover{
 }
 
 #clock {
-    font-family: JetBrainsMono Nerd Font;
+    font-family: 'CaskaydiaMono Nerd Font';
     color: #222222;
     background-color: #cba6f7;
     margin-left: 8.75px;
@@ -159,15 +181,6 @@ window#waybar:hover{
 
 #custom-expand-icon {
     margin-right: 7px;
-}
-
-tooltip {
-    padding: 2px;
-}
-
-
-.hidden {
-    opacity: 0;
 }
 
 #custom-screenrecording-indicator {
