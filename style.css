@@ -82,15 +82,8 @@ window#waybar:hover{
 }
 
 #keyboard-state {
-    all: initial;
-    padding: 0 10px;
-    margin: 0 2.5px;
-    opacity: 0.9;
-    min-width: 12px;
-    background-color: #000000;
-    /* color: #1e1e1e; */
-    border-radius: 4pt;
-    box-shadow: inset 0 -3px transparent;
+    color: #e0f0f0;
+    background-color: #292929;
 }
 
 #custom-omarchy{
@@ -135,7 +128,7 @@ window#waybar:hover{
     font-family: 'CaskaydiaMono Nerd Font';
     color: #222222;
     background-color: #cba6f7;
-    margin-left: 8.75px;
+    margin-left: 5px;
     opacity: 0.9;
 }
 
@@ -154,7 +147,8 @@ window#waybar:hover{
 #memory{
     color: #e0f0f0;
     background-color: #292929;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: 1px solid #393959;
 }
 
 #cpu{
@@ -185,10 +179,20 @@ window#waybar:hover{
 
 #custom-screenrecording-indicator {
     min-width: 12px;
-    margin-left: 8.75px;
+    margin-left: 5px;
     font-size: 10px;
+  padding-bottom: 1px;
 }
 
 #custom-screenrecording-indicator.active {
     color: #a55555;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
 }
