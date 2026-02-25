@@ -6,11 +6,11 @@
     "height": 34,
     "modules-left": [
         "custom/omarchy",
+        "keyboard-state",
         "hyprland/workspaces",
     ],
     "modules-center": [
         "clock",
-        // "keyboard-state",
         "custom/update",
         "custom/voxtype",
         "custom/screenrecording-indicator",
@@ -179,7 +179,8 @@
     "keyboard-state": {
         "numlock": false,
         "capslock": true,
-        "format": " {icon} {name} ",
+        "format": "{layout} {icon} {name} ",
+        "format-alt": "{layout}",
         // 
         "format-icons": {
             "locked": "",
