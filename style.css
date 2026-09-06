@@ -74,7 +74,7 @@ window#waybar:hover{
 #bluetooth,
 #keyboard-state,
 #pulseaudio,
-#custom-screenrecording-indicator,
+
 #custom-update {
     opacity: 0.9;
     min-width: 12px;
@@ -177,10 +177,14 @@ window#waybar:hover{
     margin-right: 7px;
 }
 
-#custom-screenrecording-indicator {
-    min-width: 12px;
-    margin-left: 5px;
-    font-size: 10px;
+
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 5px;
+  margin-right: 0;
+  font-size: 10px;
   padding-bottom: 1px;
 }
 
@@ -195,4 +199,20 @@ window#waybar:hover{
 
 #custom-voxtype.recording {
   color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
+
+#custom-weather {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+#custom-weather.unavailable {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
